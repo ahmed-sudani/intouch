@@ -1,5 +1,5 @@
 # intouch
 A news site debending on https://newsapi.org/
 
-#Build
+# Build
 node server/app.js
