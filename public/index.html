@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/angular.min.js"></script>
+    <link rel="short icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/preLoadAnimation.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>InTouch</title>
+</head>
+<body ng-app = "app"  ng-controller="content" ng-ini = "articles = []" id="body">
+    <header>
+        <a href="http://localhost:7777">
+            <img id="logoImg" src="img/logo.png" alt="">
+            InTouch
+        </a>
+        <ul id="category">
+            <a href="http://localhost:7777/search.html" id="search"> </a>
+        </ul>
+    </header>
+    <div id="container">
+        <div class="row" ng-repeat="x in articles">
+            <div  class="image" style="background-image: url({{x.urlToImage}});"></div>
+                <div class="content">
+                    <h3 class="title">{{x.title}}</h3>
+                    <h4 class="description">{{x.description}}</h4>
+                    <h4 align="bottom" class="source">{{x.source.name}}</h4>
+                    <h4 class="data">{{x.publishedAt}}</h4>
+                </div>
+                <div class="preload"></div>
+            </div>
+    </div>
+        <script src="js/controllers/public/preLoading.js"></script>
+        <script src="js/controllers/homeController/category.js"></script>
+        <script src="js/controllers/homeController/startNews.js"></script>
+    <script src="js/controllers/homeController/app.js"></script>
+</body>
+</html>

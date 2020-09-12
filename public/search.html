@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="css/search.css">
+    <script src="js/angular.min.js"></script>
+</head>
+<header>
+    <a href="http://localhost:7777">
+        <img id="logoImg" src="img/logo.png" alt="">
+        InTouch
+    </a>
+</header>
+<body ng-app = "app" ng-controller = "search">
+    <div id="search">
+        <div id="searchB">
+            <input type="search" placeholder="keyword"  id="searchI">
+            <input type="button" id="searchB" value=" ">
+        </div>
+        <div id="advance">
+            <h3>more details</h3>
+            <div id="content">
+                <div class="radioB selected" id="everything">Everything</div>
+                <div class="radioB" id="top" >Top-Headlines</div>
+                <div class="radioB" id="sources" >Sources</div>
+                <div id="choice">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="newscontent">
+
+    </div>
+    <script>
+        function select(item) {
+        let oldItem = document.getElementsByClassName('selected')[0]
+        console.log(oldItem);
+        oldItem.classList.remove('selected')
+        item.classList.add('selected')
+    }
+    </script>
+    <script src="js/controllers/searchController/categiries.js"></script>
+    <script src="js/controllers/searchController/countruesCodes.js"></script>
+    <script src="js/controllers/searchController/languages.js"></script>
+    <script src="js/controllers/searchController/public.js"></script>
+    <script src="js/controllers/searchController/sources.js"></script>
+    <script src="js/controllers/searchController/top-headlines.js"></script>
+    <script src="js/controllers/searchController/everything.js"></script>
+    <script src="js/controllers/searchController/searchB.js"></script>
+    <script src="js/controllers/searchController/app.js"></script>
+</body>
+
+</html>
